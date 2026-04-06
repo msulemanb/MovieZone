@@ -16,6 +16,7 @@ import {
   SafeAreaProvider,
   useSafeAreaInsets,
 } from 'react-native-safe-area-context';
+import AppNavigation from './navigation/appNavigation';
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
@@ -31,11 +32,7 @@ function App() {
 function AppContent() {
   // const safeAreaInsets = useSafeAreaInsets();
 
-  return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Home Screen Dev</Text>
-    </View>
-  );
+  return <AppNavigation />;
 }
 
 const styles = StyleSheet.create({
