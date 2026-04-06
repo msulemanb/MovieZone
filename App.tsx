@@ -33,7 +33,7 @@ function AppContent() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Home Screen</Text>
+      <Text style={styles.text}>Home Screen Dev</Text>
     </View>
   );
 }
@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 28,
-    color: 'brown',
+    color: 'purple',
   },
 });
 
