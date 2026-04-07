@@ -38,17 +38,4 @@ function AppContent() {
   return <AppNavigation />;
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: 'orange',
-  },
-  text: {
-    fontSize: 28,
-    color: 'purple',
-  },
-});
-
 export default App;

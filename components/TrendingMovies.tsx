@@ -22,17 +22,8 @@ const TrendingMovies = ({ data }) => {
   const ref = React.useRef<ICarouselInstance>(null); // 2. Create a ref for the Carousel component
 
   return (
-    <View style={{ marginBottom: 8 }}>
-      <Text
-        style={{
-          color: 'white',
-          fontSize: 14,
-          marginHorizontal: 4,
-          marginBottom: 5,
-        }}
-      >
-        Trending
-      </Text>
+    <View className="mb-8">
+      <Text className="text-white text-lg mx-4 mb-5">Trending</Text>
 
       <Carousel
         ref={ref}

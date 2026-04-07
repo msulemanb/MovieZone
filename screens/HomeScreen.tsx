@@ -19,23 +19,15 @@ export default function () {
   const ios = Platform.OS === 'ios';
   const [trending, setTrending] = useState([1, 2, 3]);
   return (
-    <View style={{ flex: 1, backgroundColor: '#262626' }}>
+    <View className="flex-1 bg-neutral-800">
       {/* search bar and logo */}
-      <SafeAreaView style={{ marginBottom: ios ? -2 : 3 }}>
+      <SafeAreaView className={ios ? '-mb-2' : 'mb-3'}>
         <StatusBar barStyle="light-content" />
-        <View
-          style={{
-            flexDirection: 'row',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            marginHorizontal: 4,
-            // backgroundColor: 'orange',
-          }}
-        >
+        <View className="flex-row justify-between items-center mx-4">
           <Bars3CenterLeftIcon size={30} strokeWidth={2} color="white" />
-          <Text style={styles.text}>
-            <Text style={styles.highlight}>M</Text>ovie{' '}
-            <Text style={styles.highlight}>Z</Text>one
+          <Text className="text-white text-3xl font-bold">
+            <Text className="text-orange-400">M</Text>ovie{' '}
+            <Text className="text-orange-400">Z</Text>one
           </Text>
           <TouchableOpacity>
             <MagnifyingGlassIcon size={30} strokeWidth={2} color="white" />
@@ -52,14 +44,3 @@ export default function () {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  text: {
-    color: '#ffffff',
-    fontSize: 30, // text-3xl
-    fontWeight: '700', // font-bold
-  },
-  highlight: {
-    color: 'orange',
-  },
-});
