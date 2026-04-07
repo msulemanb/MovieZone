@@ -12,9 +12,12 @@ import {
   Bars3CenterLeftIcon,
   MagnifyingGlassIcon,
 } from 'react-native-heroicons/outline';
+import TrendingMovies from '../components/TrendingMovies';
+import { useState } from 'react';
 
 export default function () {
   const ios = Platform.OS === 'ios';
+  const [trending, setTrending] = useState([1, 2, 3]);
   return (
     <View style={{ flex: 1, backgroundColor: '#262626' }}>
       {/* search bar and logo */}
@@ -44,6 +47,7 @@ export default function () {
         contentContainerStyle={{ paddingBottom: 10 }}
       >
         {/* Trending Movies */}
+        <TrendingMovies data={trending} />
       </ScrollView>
     </View>
   );
