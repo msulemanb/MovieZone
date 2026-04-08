@@ -14,10 +14,14 @@ import {
 } from 'react-native-heroicons/outline';
 import TrendingMovies from '../components/TrendingMovies';
 import { useState } from 'react';
+import MoviesList from '../components/MoviesList';
+import { appStrings } from '../constants';
 
 export default function () {
   const ios = Platform.OS === 'ios';
   const [trending, setTrending] = useState([1, 2, 3]);
+  const [upcoming, setUpcoming] = useState([1, 2, 3]);
+  const [topRated, setTopRated] = useState([1, 2, 3]);
   return (
     <View className="flex-1 bg-neutral-800">
       {/* search bar and logo */}
@@ -40,6 +44,12 @@ export default function () {
       >
         {/* Trending Movies */}
         <TrendingMovies data={trending} />
+
+        {/* Upcoming movies row */}
+        <MoviesList title={appStrings.upcoming} data={upcoming} />
+
+        {/* top rated movies row */}
+        <MoviesList title={appStrings.toprated} data={topRated} />
       </ScrollView>
     </View>
   );
